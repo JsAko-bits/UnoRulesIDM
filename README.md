@@ -66,7 +66,14 @@ X
 
 Configurations folles : 
 
+ {UnoRules, Objectif, Déroulement de la partie, Variantes, Pénalités, Nombre de Joueurs, Manches} 
+X
+
  
+
+{Se débarasser de toutes ses cartes, {Une carte même couleur ou même nombre, Possibilité de jouer 2 cartes simultanément, Possibilité de Cumuluer la carte +2,
+Possibilité de jouer simultanément une carte de même couleur suivante}, 
+{Cartes Identiques, Cumul, Suites}, {Prochain joueur pioche 2 cartes et rejouer, Rejouer}, Deux joueurs, Une manche} 
 
  
 
@@ -76,7 +83,7 @@ Nombre de variantes du Uno : Une Infinité
 
  
 
-Question 3 :  
+Question 3 :  Voir UnoRules/uno.json et unoExample.json
 
  
 
@@ -94,11 +101,11 @@ Ensuite, j’utiliserai la dépendance json_simple pour manipuler le fichier JSO
 
  
 
-Question 5 : 
+Question 4B : J'ai fait le générateur du DSL. Voir UnoGenerator.java
 
  
 
-Question 6 : 
+Question 5 : 
 
 L’idée serait de créer un compilateur donc qui prend un modèle écrit par l’utilisateur sur la base de notre grammaire et de générer un fichier JSON. 
 Pour ce faire, nous utiliserons le langage Xtext, Xtend et Java.
@@ -106,4 +113,4 @@ La dépendance json_simple nous permettra d’écrire dans un fichier JSON les i
 
  
 
-Question 7 : 
+Question 5B : Voir UnoToJson.java
