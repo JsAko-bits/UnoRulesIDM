@@ -1,0 +1,156 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "Objectif": "Se débarasser de toutes les cartes",
+            "Deroulement": [
+                "Une Carte même couleur ou même nombre",
+                "Possibilité de cumuler la carte +2",
+                "Possibilité de rejouer immédiatement une carte de même couleur suivante"
+            ],
+            "Joueurs": 2,
+            "Pénalités": {
+                "Pénalité +2": "Joueur suivant pioche 2 cartes et passe son tour",
+                "Pénalité Inversion": "Changer de snes"
+            },
+            "Variantes": [
+                "Cumul +2",
+                "Suites"
+            ]
+        }
+    ],
+    "required": [
+        "Objectif",
+        "Deroulement",
+        "Joueurs",
+        "Pénalités"  
+          ],
+    "properties": {
+        "Objectif": {
+            "$id": "#/properties/Objectif",
+            "type": "string",
+            "title": "The Objectif schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Se débarasser de toutes les cartes"
+            ]
+        },
+        "Deroulement": {
+            "$id": "#/properties/Deroulement",
+            "type": "array",
+            "title": "The Deroulement schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "Une Carte même couleur ou même nombre",
+                    "Possibilité de cumuler la carte +2"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/Deroulement/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/Deroulement/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Une Carte même couleur ou même nombre",
+                            "Possibilité de cumuler la carte +2"
+                        ]
+                    }
+                ]
+            }
+        },
+        "Joueurs": {
+            "$id": "#/properties/Joueurs",
+            "type": "integer",
+            "title": "The Joueurs schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                2
+            ]
+        },
+        "Pénalités": {
+            "$id": "#/properties/P%C3%A9nalit%C3%A9s",
+            "type": "object",
+            "title": "The Pénalités schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "Pénalité +2": "Joueur suivant pioche 2 cartes et passe son tour",
+                    "Pénalité Inversion": "Changer de snes"
+                }
+            ],
+            "required": [
+                "Pénalité +2",
+                "Pénalité Inversion"
+            ],
+            "properties": {
+                "Pénalité +2": {
+                    "$id": "#/properties/P%C3%A9nalit%C3%A9s/properties/P%C3%A9nalit%C3%A9%20%2B2",
+                    "type": "string",
+                    "title": "The Pénalité +2 schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Joueur suivant pioche 2 cartes et passe son tour"
+                    ]
+                },
+                "Pénalité Inversion": {
+                    "$id": "#/properties/P%C3%A9nalit%C3%A9s/properties/P%C3%A9nalit%C3%A9%20Inversion",
+                    "type": "string",
+                    "title": "The Pénalité Inversion schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Changer de sens"
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "Variantes": {
+            "$id": "#/properties/Variantes",
+            "type": "array",
+            "title": "The Variantes schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    "Cumul +2",
+                    "Suites"
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/Variantes/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/Variantes/items/anyOf/0",
+                        "type": "string",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Cumul +2",
+                            "Suites"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}

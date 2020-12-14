@@ -1,0 +1,28 @@
+grammar org.xtext.example.uno.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/uno/MyDsl"
+
+Model:
+	rules+=Rule*;
+	
+Rule:
+	'Objectif: ' objectif=Objectif
+	joueur=Joueur 'joueurs'
+	'Règlement {'
+	(regle+=Regle)+
+	'}';
+
+enum Objectif:
+	UnoChallenge = 'Uno Challenge' | Classique = 'Classique'
+;
+
+enum Regle:
+	Basique = 'Jouer une carte même couleur ou même nombre' | 
+	CarteIdentique = 'Possibilité de jouer 2 cartes identiques simultanément' |
+	Suite = 'Possibilité de jouer immédiatement une carte de même couleur' |
+	Cumul ='Possibilité de cumuler la carte +2'
+;
+
+enum Joueur:
+	Deux ='2' | PlusDeux = 'Plus de deux'
+;

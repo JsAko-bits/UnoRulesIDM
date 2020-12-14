@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="UnoRules"/>
+	<feature automatic="selected" name="Objectif"/>
+	<feature manual="selected" name="Se débarasser de toutes ses cartes"/>
+	<feature automatic="unselected" name="Uno Challenge"/>
+	<feature automatic="selected" name="Déroulement de la partie"/>
+	<feature name="Possibilité de jouer 2 cartes identiques simultanéïment"/>
+	<feature name="Possibilité de rejouer immédiatement une carte de même couleur suivante"/>
+	<feature automatic="selected" name="Une Carte même couleur ou même nombre"/>
+	<feature automatic="selected" name="Possibilité de cumuler la carte +2"/>
+	<feature automatic="selected" manual="selected" name="Variantes"/>
+	<feature name="Cartes Identiques"/>
+	<feature name="Suites"/>
+	<feature manual="selected" name="Cumul +2"/>
+	<feature automatic="selected" name="Pénalités"/>
+	<feature automatic="selected" name="Pénalité +2"/>
+	<feature automatic="unselected" name="Prochain joueur pioche 2 cartes et passe son tour"/>
+	<feature automatic="selected" name="Prochain joueur pioche 2 cartes et Rejouer"/>
+	<feature automatic="selected" name="Conséquence Inversion"/>
+	<feature automatic="unselected" name="Changer de sens"/>
+	<feature automatic="selected" name="Rejouer"/>
+	<feature automatic="selected" name="Nombre de Joueurs"/>
+	<feature manual="selected" name="Deux joueurs"/>
+	<feature automatic="unselected" name="Entre 3 et 10 joueurs"/>
+	<feature automatic="selected" name="Manches"/>
+	<feature automatic="selected" name="Une manche"/>
+	<feature automatic="unselected" name="Jouer manches jusqu'à ce qu'il reste un joueur, en éliminant les joueurs ayant 500 points"/>
+</configuration>

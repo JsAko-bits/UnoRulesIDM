@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="legendposition" value="1593,301"/>
+		<graphics key="legendautolayout" value="false"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="UnoRules">
+			<alt mandatory="true" name="Objectif">
+				<graphics key="collapsed" value="false"/>
+				<feature name="Se débarasser de toutes ses cartes"/>
+				<feature name="Uno Challenge"/>
+			</alt>
+			<and mandatory="true" name="Déroulement de la partie">
+				<feature name="Possibilité de jouer 2 cartes identiques simultanéïment"/>
+				<feature name="Possibilité de rejouer immédiatement une carte de même couleur suivante"/>
+				<feature mandatory="true" name="Une Carte même couleur ou même nombre"/>
+				<feature name="Possibilité de cumuler la carte +2"/>
+			</and>
+			<and name="Variantes">
+				<feature name="Cartes Identiques"/>
+				<feature name="Suites"/>
+				<feature name="Cumul +2"/>
+			</and>
+			<and mandatory="true" name="Pénalités">
+				<graphics key="collapsed" value="false"/>
+				<alt abstract="true" mandatory="true" name="Pénalité +2">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Prochain joueur pioche 2 cartes et passe son tour"/>
+					<feature name="Prochain joueur pioche 2 cartes et Rejouer"/>
+				</alt>
+				<alt abstract="true" mandatory="true" name="Conséquence Inversion">
+					<graphics key="collapsed" value="false"/>
+					<feature name="Changer de sens"/>
+					<feature name="Rejouer"/>
+				</alt>
+			</and>
+			<alt mandatory="true" name="Nombre de Joueurs">
+				<graphics key="collapsed" value="false"/>
+				<feature name="Deux joueurs"/>
+				<feature name="Entre 3 et 10 joueurs"/>
+			</alt>
+			<alt abstract="true" mandatory="true" name="Manches">
+				<graphics key="collapsed" value="false"/>
+				<feature name="Une manche"/>
+				<feature name="Jouer manches jusqu'à ce qu'il reste un joueur, en éliminant les joueurs ayant 500 points"/>
+			</alt>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>Se débarasser de toutes ses cartes</var>
+				<var>Une manche</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Uno Challenge</var>
+				<var>Jouer manches jusqu'à ce qu'il reste un joueur, en éliminant les joueurs ayant 500 points</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Cartes Identiques</var>
+				<var>Possibilité de jouer 2 cartes identiques simultanéïment</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Suites</var>
+				<var>Possibilité de rejouer immédiatement une carte de même couleur suivante</var>
+			</imp>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>Entre 3 et 10 joueurs</var>
+				</not>
+				<var>Prochain joueur pioche 2 cartes et passe son tour</var>
+			</disj>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>Entre 3 et 10 joueurs</var>
+				</not>
+				<var>Changer de sens</var>
+			</disj>
+		</rule>
+		<rule>
+			<imp>
+				<var>Deux joueurs</var>
+				<var>Prochain joueur pioche 2 cartes et Rejouer</var>
+			</imp>
+		</rule>
+		<rule>
+			<disj>
+				<not>
+					<var>Deux joueurs</var>
+				</not>
+				<var>Rejouer</var>
+			</disj>
+		</rule>
+		<rule>
+			<imp>
+				<var>Cumul +2</var>
+				<var>Possibilité de cumuler la carte +2</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>

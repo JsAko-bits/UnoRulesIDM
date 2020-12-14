@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="myDsl" nsURI="http://www.xtext.org/example/uno/MyDsl" nsPrefix="myDsl">
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rules" upperBound="-1"
+        eType="#//Rule" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectif" eType="#//Objectif"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="joueur" eType="#//Joueur"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="regle" unique="false" upperBound="-1"
+        eType="#//Regle"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Objectif">
+    <eLiterals name="UnoChallenge" literal="Uno Challenge"/>
+    <eLiterals name="Classique" value="1" literal="Classique"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Regle">
+    <eLiterals name="Basique" literal="Jouer une carte même couleur ou même nombre"/>
+    <eLiterals name="CarteIdentique" value="1" literal="Possibilité de jouer 2 cartes identiques simultanément"/>
+    <eLiterals name="Suite" value="2" literal="Possibilité de jouer immédiatement une carte de même couleur"/>
+    <eLiterals name="Cumul" value="3" literal="Possibilité de cumuler la carte +2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Joueur">
+    <eLiterals name="Deux" literal="2"/>
+    <eLiterals name="PlusDeux" value="1" literal="Plus de deux"/>
+  </eClassifiers>
+</ecore:EPackage>

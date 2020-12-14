@@ -1,0 +1,17 @@
+{
+    "Objectif": "Se débarasser de toutes les cartes",
+    "Deroulement": [
+        "Une Carte même couleur ou même nombre",
+        "Possibilité de cumuler la carte +2",
+        "Possibilité de rejouer immédiatement une carte de même couleur suivante"
+    ],
+    "Joueurs": 2,
+    "Pénalités": {
+        "Pénalité +2": "Joueur suivant pioche 2 cartes et passe son tour",
+        "Pénalité Inversion": "Changer de snes"
+    },
+    "Variantes": [
+        "Cumul +2",
+        "Suites"
+    ]
+}
